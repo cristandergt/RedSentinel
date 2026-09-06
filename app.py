@@ -204,11 +204,16 @@ if start_simulation:
         auditor_buffer = ""
         raw_logs = []
         
+        
         current_agent = "red"
-        
-        npx_cmd = "npx.cmd" if sys.platform == "win32" else "npx"
-        cmd = [npx_cmd, "ts-node", "index.ts", scenario_input]
-        
+        env_vars = os.environ.copy()
+
+        try:
+            if "GEMINI_API_KEY" in st.secrets:
+                env_vars["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+        except Exception:
+            pass
+        cmd = ["node", "index.js", scenario_input]        
         try:
             process = subprocess.Popen(
                 cmd,
@@ -216,7 +221,9 @@ if start_simulation:
                 stderr=subprocess.STDOUT,
                 text=True,
                 bufsize=1,
-                universal_newlines=True
+                universal_newlines=True,
+                env=env_vars
+                
             )
             
             if process.stdout:
