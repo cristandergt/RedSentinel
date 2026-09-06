@@ -1,0 +1,14 @@
+# Dependencias y entornos virtuales
+node_modules/
+venv/
+__pycache__/
+
+# Credenciales, tokens y configuraciones locales
+.env
+.env.local
+.streamlit/secrets.toml
+
+# Archivos del sistema operativo y logs
+.DS_Store
+Thumbs.db
+*.log

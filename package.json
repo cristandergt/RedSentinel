@@ -1,0 +1,32 @@
+{
+  "name": "redsentinel",
+  "version": "1.0.0",
+  "description": "A concurrent multi-agent system where autonomous AI agents run simultaneously to analyze, simulate, and defend against security anomalies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristandergt/RedSentinel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristandergt/RedSentinel/issues"
+  },
+  "homepage": "https://github.com/cristandergt/RedSentinel#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.5.0",
+    "@mozaik-ai/core": "^4.0.5",
+    "ajv-formats": "^3.0.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
