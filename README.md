@@ -1,5 +1,7 @@
 # 🛡️ RedSentinel: Multi-Agent Cybersecurity SOC Dashboard
 
+https://redsentinel-mozaik.streamlit.app/
+
 > A concurrent multi-agent system where autonomous AI agents run simultaneously to analyze, simulate, and defend against security anomalies in real-time.
 
 ---
